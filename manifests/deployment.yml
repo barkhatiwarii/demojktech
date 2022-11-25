@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: demojktech 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demojktech
+  template:
+    metadata:
+      labels:
+        app: demojktech 
+    spec:
+      containers:
+        - name: demojktech 
+          image: mycontainerregistry1adarsh.azurecr.io/demojktech
+          ports:
+          - containerPort: 8080
